@@ -21,4 +21,5 @@ MVVM By Nun
 - Auto generates encode and init methods if fields have same name as keys as in JSON, so less code is required.
 - As it is native solution new updates are available in Foundation framework.
 
+Reference: Medium: [Medium of Qamar Saleem](https://medium.com/@qamar_37318/war-on-json-in-swift-object-mapper-vs-codable-e0598a64c746#:~:text=Codable%20is%20probably%20slower%20than,dependency%20for%20parsing%20and%20mapping.)
 ## Tools for generate Object Mapper
