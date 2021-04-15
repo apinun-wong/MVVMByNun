@@ -15,6 +15,9 @@
 		1C378B9526284E7800E7268F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C378B9326284E7800E7268F /* LaunchScreen.storyboard */; };
 		1C38E5AF2628564C00F38513 /* ProgressLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5AE2628564C00F38513 /* ProgressLoading.swift */; };
 		1C38E5B22628568900F38513 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5B12628568900F38513 /* LoginViewModel.swift */; };
+		1C38E5C126289C7500F38513 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5C026289C7500F38513 /* AuthAPI.swift */; };
+		1C38E5C726289E8200F38513 /* URLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5C626289E8200F38513 /* URLConfig.swift */; };
+		1C38E5CD2628A6B000F38513 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5CC2628A6B000F38513 /* AuthRepository.swift */; };
 		1C7F6DEC2628508E0070ECC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F6DEA2628508E0070ECC0 /* LoginViewController.swift */; };
 		1C7F6DED2628508E0070ECC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7F6DEB2628508E0070ECC0 /* LoginViewController.xib */; };
 		1C7F6DF0262851720070ECC0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F6DEF262851720070ECC0 /* BaseViewController.swift */; };
@@ -33,6 +36,9 @@
 		1C378B9626284E7800E7268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C38E5AE2628564C00F38513 /* ProgressLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoading.swift; sourceTree = "<group>"; };
 		1C38E5B12628568900F38513 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1C38E5C026289C7500F38513 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		1C38E5C626289E8200F38513 /* URLConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfig.swift; sourceTree = "<group>"; };
+		1C38E5CC2628A6B000F38513 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		1C7F6DEA2628508E0070ECC0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1C7F6DEB2628508E0070ECC0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1C7F6DEF262851720070ECC0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +79,11 @@
 		1C378B8726284E7600E7268F /* MVVM+Clean */ = {
 			isa = PBXGroup;
 			children = (
+				1C38E5CB2628A69200F38513 /* UseCase */,
+				1C38E5CA2628A68C00F38513 /* Repository */,
+				1C38E5C526289E7500F38513 /* Config */,
+				1C38E5BF26289C6800F38513 /* API */,
+				1C38E5BE26289C5D00F38513 /* Model */,
 				1C38E5AD2628564500F38513 /* CustomView */,
 				1C7F6DF2262851940070ECC0 /* Resource */,
 				1C7F6DE9262850830070ECC0 /* Login */,
@@ -92,6 +103,44 @@
 				1C38E5AE2628564C00F38513 /* ProgressLoading.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		1C38E5BE26289C5D00F38513 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C38E5BF26289C6800F38513 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1C38E5C026289C7500F38513 /* AuthAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1C38E5C526289E7500F38513 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1C38E5C626289E8200F38513 /* URLConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		1C38E5CA2628A68C00F38513 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1C38E5CC2628A6B000F38513 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1C38E5CB2628A69200F38513 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		1C7F6DE9262850830070ECC0 /* Login */ = {
@@ -246,9 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7F6DF0262851720070ECC0 /* BaseViewController.swift in Sources */,
+				1C38E5C726289E8200F38513 /* URLConfig.swift in Sources */,
 				1C7F6DEC2628508E0070ECC0 /* LoginViewController.swift in Sources */,
+				1C38E5CD2628A6B000F38513 /* AuthRepository.swift in Sources */,
 				1C378B8D26284E7600E7268F /* ViewController.swift in Sources */,
 				1C378B8926284E7600E7268F /* AppDelegate.swift in Sources */,
+				1C38E5C126289C7500F38513 /* AuthAPI.swift in Sources */,
 				1C378B8B26284E7600E7268F /* SceneDelegate.swift in Sources */,
 				1C38E5AF2628564C00F38513 /* ProgressLoading.swift in Sources */,
 				1C38E5B22628568900F38513 /* LoginViewModel.swift in Sources */,

@@ -6,5 +6,6 @@ target 'MVVM+Clean' do
   use_frameworks!
 
   pod 'MKProgress'
+  pod 'Moya/RxSwift', '~> 14.0'
 
 end
