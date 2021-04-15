@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SukhumvitSet-Medium.ttf">
+            <string>SukhumvitSet-Medium</string>
+        </array>
+        <array key="SukhumvitSet-SemiBold.ttf">
+            <string>SukhumvitSet-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="MVVM_Clean" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="ca3-e3-1Ta" id="eXT-AP-u7R"/>
+                <outlet property="passwordView" destination="72h-KK-dza" id="muK-aU-dUj"/>
+                <outlet property="userNameView" destination="nkb-y7-pib" id="BiV-iE-kM1"/>
+                <outlet property="view" destination="sfu-ER-sdw" id="2fz-bp-KDM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sfu-ER-sdw">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JmR-yc-TMl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-y7-pib">
+                    <rect key="frame" x="41.5" y="428" width="331" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_username_icn" translatesAutoresizingMaskIntoConstraints="NO" id="U6N-9i-fU3">
+                            <rect key="frame" x="25" y="12.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="U6N-9i-fU3" secondAttribute="height" multiplier="1:1" id="H3w-f4-p0j"/>
+                                <constraint firstAttribute="width" constant="25" id="Wlw-8h-yI1"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbH-JL-edF">
+                            <rect key="frame" x="65" y="8" width="251" height="34"/>
+                            <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="U6N-9i-fU3" firstAttribute="leading" secondItem="nkb-y7-pib" secondAttribute="leading" constant="25" id="3Rs-Bf-HPi"/>
+                        <constraint firstItem="vbH-JL-edF" firstAttribute="top" secondItem="nkb-y7-pib" secondAttribute="top" constant="8" id="4dJ-ba-GmG"/>
+                        <constraint firstAttribute="bottom" secondItem="vbH-JL-edF" secondAttribute="bottom" constant="8" id="UXw-kj-MzH"/>
+                        <constraint firstItem="U6N-9i-fU3" firstAttribute="centerY" secondItem="nkb-y7-pib" secondAttribute="centerY" id="gdX-5k-N0o"/>
+                        <constraint firstItem="vbH-JL-edF" firstAttribute="leading" secondItem="U6N-9i-fU3" secondAttribute="trailing" constant="15" id="kOc-YO-vpm"/>
+                        <constraint firstAttribute="height" constant="50" id="lDm-rT-Nbk"/>
+                        <constraint firstAttribute="trailing" secondItem="vbH-JL-edF" secondAttribute="trailing" constant="15" id="roD-k8-RFH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" white="0.76979486196319014" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72h-KK-dza">
+                    <rect key="frame" x="41.5" y="503" width="331" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_username_icn copy" translatesAutoresizingMaskIntoConstraints="NO" id="ObP-uq-HcK">
+                            <rect key="frame" x="25" y="10.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="lBw-2V-atR"/>
+                                <constraint firstAttribute="width" secondItem="ObP-uq-HcK" secondAttribute="height" multiplier="1:1" id="qlL-am-ICz"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-NF-aPr">
+                            <rect key="frame" x="65" y="8" width="251" height="30"/>
+                            <fontDescription key="fontDescription" name="SukhumvitSet-Medium" family="Sukhumvit Set" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                        </textField>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="FXM-4Y-mt1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bbb-NF-aPr" secondAttribute="bottom" constant="8" id="0z3-Vr-NmB"/>
+                        <constraint firstItem="bbb-NF-aPr" firstAttribute="leading" secondItem="ObP-uq-HcK" secondAttribute="trailing" constant="15" id="1J3-SN-y4v"/>
+                        <constraint firstItem="ObP-uq-HcK" firstAttribute="centerY" secondItem="72h-KK-dza" secondAttribute="centerY" id="Rrc-ad-VGU"/>
+                        <constraint firstItem="ObP-uq-HcK" firstAttribute="leading" secondItem="72h-KK-dza" secondAttribute="leading" constant="25" id="TXt-eQ-Iic"/>
+                        <constraint firstAttribute="trailing" secondItem="bbb-NF-aPr" secondAttribute="trailing" constant="15" id="Zgy-ZR-kor"/>
+                        <constraint firstItem="bbb-NF-aPr" firstAttribute="top" secondItem="72h-KK-dza" secondAttribute="top" constant="8" id="tNV-eP-cu1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-e3-1Ta">
+                    <rect key="frame" x="41.5" y="649" width="331" height="60"/>
+                    <color key="backgroundColor" red="0.10588235294117647" green="0.15686274509803921" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="lqg-sQ-xRa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="18"/>
+                    <state key="normal" title="เข้าสู่ระบบ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3Ov-VP-eVL"/>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="top" secondItem="JmR-yc-TMl" secondAttribute="top" id="7aT-1x-xfc"/>
+                <constraint firstItem="72h-KK-dza" firstAttribute="top" secondItem="nkb-y7-pib" secondAttribute="bottom" constant="25" id="AHK-G8-6RY"/>
+                <constraint firstItem="JmR-yc-TMl" firstAttribute="trailing" secondItem="3Ov-VP-eVL" secondAttribute="trailing" id="DAM-Uf-c82"/>
+                <constraint firstItem="72h-KK-dza" firstAttribute="trailing" secondItem="nkb-y7-pib" secondAttribute="trailing" id="Fdy-3T-b9W"/>
+                <constraint firstItem="JmR-yc-TMl" firstAttribute="bottom" secondItem="sfu-ER-sdw" secondAttribute="bottom" id="MoR-Uo-PRu"/>
+                <constraint firstItem="72h-KK-dza" firstAttribute="leading" secondItem="nkb-y7-pib" secondAttribute="leading" id="QJC-CW-ASd"/>
+                <constraint firstItem="ca3-e3-1Ta" firstAttribute="trailing" secondItem="nkb-y7-pib" secondAttribute="trailing" id="VZw-Dv-cm1"/>
+                <constraint firstItem="72h-KK-dza" firstAttribute="height" secondItem="nkb-y7-pib" secondAttribute="height" multiplier="0.92" id="W54-Fl-scZ"/>
+                <constraint firstItem="ca3-e3-1Ta" firstAttribute="leading" secondItem="nkb-y7-pib" secondAttribute="leading" id="a4T-VU-clk"/>
+                <constraint firstItem="nkb-y7-pib" firstAttribute="centerX" secondItem="3Ov-VP-eVL" secondAttribute="centerX" id="cLm-Jw-CWb"/>
+                <constraint firstItem="ca3-e3-1Ta" firstAttribute="top" secondItem="72h-KK-dza" secondAttribute="bottom" constant="100" id="e9L-jy-8sS"/>
+                <constraint firstItem="nkb-y7-pib" firstAttribute="width" secondItem="sfu-ER-sdw" secondAttribute="width" multiplier="0.8" id="fW9-CM-aAy"/>
+                <constraint firstItem="JmR-yc-TMl" firstAttribute="leading" secondItem="3Ov-VP-eVL" secondAttribute="leading" id="iEA-2Y-5C3"/>
+                <constraint firstItem="nkb-y7-pib" firstAttribute="centerY" secondItem="3Ov-VP-eVL" secondAttribute="centerY" id="uqF-s7-HVC"/>
+            </constraints>
+            <point key="canvasLocation" x="128.98550724637681" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="form_username_icn" width="24" height="24"/>
+        <image name="form_username_icn copy" width="24" height="24"/>
+        <image name="splash_screen_bg" width="360" height="640"/>
+    </resources>
+</document>
