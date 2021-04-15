@@ -23,3 +23,5 @@ MVVM By Nun
 
 Reference: Medium: [Medium of Qamar Saleem](https://medium.com/@qamar_37318/war-on-json-in-swift-object-mapper-vs-codable-e0598a64c746#:~:text=Codable%20is%20probably%20slower%20than,dependency%20for%20parsing%20and%20mapping.)
 ## Tools for generate Object Mapper
+- [Tools for macOS](https://github.com/chanonly123/Json-Model-Generator)
+- [Tools online](https://app.quicktype.io/)
