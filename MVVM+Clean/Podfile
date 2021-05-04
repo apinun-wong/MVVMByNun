@@ -7,5 +7,5 @@ target 'MVVM+Clean' do
 
   pod 'MKProgress'
   pod 'Moya/RxSwift', '~> 14.0'
-
+  pod 'ObjectMapper', '~> 3.5' 
 end
