@@ -18,6 +18,7 @@ final class AboutViewController: BaseViewController<AboutViewModel> {
         bindInput()
     }
     private func setUpUI() {
+        self.title = "About"
         let fullText = "contact: \(email)"
         contactLabel.text = fullText
         self.contactLabel.attributedText = viewModel.output.setupUnderLineText(fullText: fullText, emailText: email)

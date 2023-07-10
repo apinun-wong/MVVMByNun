@@ -23,6 +23,7 @@ final class HomeCoordinatorImpl: HomeCoordinator {
     func start(animated: Bool) {
         let viewModel = HomeViewModelImpl(homeCoordinator: self)
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil, viewModel: viewModel)
+        navigationController.setNavigationBarHidden(false, animated: true)
         vc.tabBarItem = UITabBarItem(title: "Home",
                                      image: UIImage(systemName: "house.fill"),
                                      selectedImage: nil)

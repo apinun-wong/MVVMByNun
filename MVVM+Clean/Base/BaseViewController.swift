@@ -29,6 +29,16 @@ open class BaseViewController<ViewModel>: UIViewController {
         
     }
     
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationItem.scrollEdgeAppearance = navigationBarAppearance
+        navigationItem.standardAppearance = navigationBarAppearance
+        navigationItem.compactAppearance = navigationBarAppearance
+
+    }
+    
     deinit {
         DebugLogger.release()
     }

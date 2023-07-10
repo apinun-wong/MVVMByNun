@@ -38,6 +38,9 @@
 		1CB04A742A5BA0F000E2C834 /* UITapGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB04A732A5BA0F000E2C834 /* UITapGestureRecognizer+Extension.swift */; };
 		1CB04A772A5BA90900E2C834 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB04A762A5BA90900E2C834 /* EmailSender.swift */; };
 		1CD1B5CD26419F7C005D6CB6 /* CharactorServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD1B5CC26419F7C005D6CB6 /* CharactorServiceTarget.swift */; };
+		1CE01E8E2A5BB69100F4C6A8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01E8C2A5BB69100F4C6A8 /* HomeTableViewCell.swift */; };
+		1CE01E8F2A5BB69100F4C6A8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE01E8D2A5BB69100F4C6A8 /* HomeTableViewCell.xib */; };
+		1CE01E912A5BBA6300F4C6A8 /* CollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01E902A5BBA6300F4C6A8 /* CollectionView+Extension.swift */; };
 		7673A2A169B9A383B9C3AAF5 /* Pods_MVVM_Clean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89241CC9190F5CE33D0D5FD3 /* Pods_MVVM_Clean.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,9 @@
 		1CB04A732A5BA0F000E2C834 /* UITapGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
 		1CB04A762A5BA90900E2C834 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
 		1CD1B5CC26419F7C005D6CB6 /* CharactorServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactorServiceTarget.swift; sourceTree = "<group>"; };
+		1CE01E8C2A5BB69100F4C6A8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1CE01E8D2A5BB69100F4C6A8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		1CE01E902A5BBA6300F4C6A8 /* CollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extension.swift"; sourceTree = "<group>"; };
 		6AE0BE84AB962F68C2CEAB08 /* Pods-MVVM+Clean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Clean.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean.debug.xcconfig"; sourceTree = "<group>"; };
 		89241CC9190F5CE33D0D5FD3 /* Pods_MVVM_Clean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Clean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +203,7 @@
 		1CB04A3E2A5A5CB800E2C834 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1CE01E8B2A5BB67D00F4C6A8 /* ItemType */,
 				1CB04A662A5A67DD00E2C834 /* HomeViewController.swift */,
 				1CB04A672A5A67DD00E2C834 /* HomeViewController.xib */,
 				1CB04A6A2A5A67E700E2C834 /* HomeViewModel.swift */,
@@ -267,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB04A732A5BA0F000E2C834 /* UITapGestureRecognizer+Extension.swift */,
+				1CE01E902A5BBA6300F4C6A8 /* CollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +299,15 @@
 			children = (
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		1CE01E8B2A5BB67D00F4C6A8 /* ItemType */ = {
+			isa = PBXGroup;
+			children = (
+				1CE01E8C2A5BB69100F4C6A8 /* HomeTableViewCell.swift */,
+				1CE01E8D2A5BB69100F4C6A8 /* HomeTableViewCell.xib */,
+			);
+			path = ItemType;
 			sourceTree = "<group>";
 		};
 		982B29312D90093446BBDAA2 /* Frameworks */ = {
@@ -373,6 +390,7 @@
 				1C378B9226284E7800E7268F /* Assets.xcassets in Resources */,
 				1CB04A692A5A67DD00E2C834 /* HomeViewController.xib in Resources */,
 				1CB04A612A5A66CF00E2C834 /* AboutViewController.xib in Resources */,
+				1CE01E8F2A5BB69100F4C6A8 /* HomeTableViewCell.xib in Resources */,
 				1CB04A452A5A5EFC00E2C834 /* SplashScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +452,7 @@
 				1CB04A522A5A617700E2C834 /* BaseViewController.swift in Sources */,
 				1CB04A6F2A5A9D4100E2C834 /* AppTabBarViewModel.swift in Sources */,
 				1CB04A772A5BA90900E2C834 /* EmailSender.swift in Sources */,
+				1CE01E912A5BBA6300F4C6A8 /* CollectionView+Extension.swift in Sources */,
 				1CB04A5C2A5A667500E2C834 /* AppTabBarController.swift in Sources */,
 				1C378B8926284E7600E7268F /* AppDelegate.swift in Sources */,
 				1C38E5C126289C7500F38513 /* AuthAPI.swift in Sources */,
@@ -441,6 +460,7 @@
 				1CB04A562A5A61CD00E2C834 /* SplashCoordinator.swift in Sources */,
 				1CB04A602A5A66CF00E2C834 /* AboutViewController.swift in Sources */,
 				1CB04A4B2A5A5FDF00E2C834 /* RootCoordinator.swift in Sources */,
+				1CE01E8E2A5BB69100F4C6A8 /* HomeTableViewCell.swift in Sources */,
 				1CB04A4D2A5A614500E2C834 /* SplashScreenViewModel.swift in Sources */,
 				1CB04A442A5A5EFC00E2C834 /* SplashScreenViewController.swift in Sources */,
 				1CD1B5CD26419F7C005D6CB6 /* CharactorServiceTarget.swift in Sources */,
