@@ -7,23 +7,31 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
-
+final class AboutViewController: BaseViewController<AboutViewModel> {
+    @IBOutlet weak var contactLabel: UILabel!
+    private let email: String = "apinun.wong@gmail.com"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewModel.input.viewDidLoad?()
+        setUpUI()
+        bindInput()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpUI() {
+        let fullText = "contact: \(email)"
+        contactLabel.text = fullText
+        self.contactLabel.attributedText = viewModel.output.setupUnderLineText(fullText: fullText, emailText: email)
     }
-    */
-
+    
+    private func bindInput() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(_:)))
+        contactLabel.isUserInteractionEnabled = true
+        contactLabel.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func tapLabel(_ gesture: UITapGestureRecognizer) {
+        if gesture.didTapAttributedTextInLabel(label: contactLabel, targetText: email) {
+            self.launchEmail(email: email, subject: "Hi", message: "introduct your self")
+        }
+    }
 }

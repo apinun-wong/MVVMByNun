@@ -5,4 +5,25 @@
 //  Created by Apinun on 9/7/2566 BE.
 //
 
-import Foundation
+import UIKit
+
+protocol AboutCoordinator: Coordinator {}
+
+final class AboutCoordinatorImpl: AboutCoordinator {
+    var navigationController: UINavigationController
+    var parent: AppTabBarCoordinator
+    
+    init(navigationController: UINavigationController, parent: AppTabBarCoordinator) {
+        self.navigationController = navigationController
+        self.parent = parent
+    }
+
+    func start(animated: Bool) {
+        let viewModel = AboutViewModelImpl(aboutCoordinator: self)
+        let vc = AboutViewController(nibName: "AboutViewController", bundle: nil, viewModel: viewModel)
+        vc.tabBarItem = UITabBarItem(title: "About",
+                                     image: UIImage(systemName: "gear.circle.fill"),
+                                     selectedImage: nil)
+        navigationController.pushViewController(vc, animated: animated)
+    }
+}
