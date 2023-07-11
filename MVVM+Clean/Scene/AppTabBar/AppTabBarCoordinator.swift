@@ -8,12 +8,13 @@
 import UIKit
 
 protocol AppTabBarCoordinator: Coordinator {
-    func routeToHomePage()
+    var appTabBar: AppTabBarController? { get set }
     func getViewControllers() -> [UIViewController]
 }
 
 final class AppTabBarCoordinatorImpl: AppTabBarCoordinator {
     var navigationController: UINavigationController
+    var appTabBar: AppTabBarController?
     var parent: Coordinator
     var homeCoordinator: HomeCoordinator?
     var aboutCoordinator: AboutCoordinator?
@@ -26,9 +27,10 @@ final class AppTabBarCoordinatorImpl: AppTabBarCoordinator {
 
     func start(animated: Bool) {
         let viewModel = AppTabBarViewModelImpl(appTabBarCoordinator: self)
-        let baseTabBarViewController = AppTabBarController(viewModel: viewModel)
-        baseTabBarViewController.modalPresentationStyle = .fullScreen
-        self.navigationController.pushViewController(baseTabBarViewController, animated: false)
+        appTabBar = AppTabBarController(viewModel: viewModel)
+        appTabBar?.modalPresentationStyle = .fullScreen
+        guard let appTabBar else { return }
+        self.navigationController.pushViewController(appTabBar, animated: false)
     }
     
     func getViewControllers() -> [UIViewController] {
@@ -37,10 +39,6 @@ final class AppTabBarCoordinatorImpl: AppTabBarCoordinator {
         }
         return [homeCoordinator.navigationController,
                 aboutCoordinator.navigationController]
-    }
-
-    func routeToHomePage() {
-        
     }
 }
 

@@ -8,16 +8,19 @@
 import UIKit
 
 protocol HomeCoordinator: Coordinator {
-    func routeToHomePage()
+    var appTabBar: AppTabBarController? { get set }
+    func routeToDetailPage(title: String, item: CodeStatusResponse)
 }
 
 final class HomeCoordinatorImpl: HomeCoordinator {
     var navigationController: UINavigationController
     var parent: AppTabBarCoordinator
+    var appTabBar: AppTabBarController?
     
-    init(navigationController: UINavigationController, parent: AppTabBarCoordinator) {
+    init(navigationController: UINavigationController, appTabBar: AppTabBarController? = nil, parent: AppTabBarCoordinator) {
         self.navigationController = navigationController
         self.parent = parent
+        self.appTabBar = appTabBar
     }
 
     func start(animated: Bool) {
@@ -32,8 +35,14 @@ final class HomeCoordinatorImpl: HomeCoordinator {
         navigationController.pushViewController(vc, animated: animated)
     }
 
-    func routeToHomePage() {
-        
+    func routeToDetailPage(title: String, item: CodeStatusResponse) {
+        parent.appTabBar?.isHiddenView = true
+        let httpDetailCoordinate: HttpDetailCoordinator = HttpDetailCoordinatorImpl(navigationController: navigationController,
+                                                                                    appTabBar: parent.appTabBar,
+                                                                                    parent: self,
+                                                                                    title: title,
+                                                                                    item: item)
+        httpDetailCoordinate.start(animated: true)
     }
 }
 

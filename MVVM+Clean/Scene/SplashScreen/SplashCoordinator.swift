@@ -38,5 +38,7 @@ final class SplashCoordinatorImpl: SplashCoordinator {
         appTabBarCoordinator.homeCoordinator = homeCoordinator
         appTabBarCoordinator.aboutCoordinator = aboutCoordinator
         appTabBarCoordinator.start(animated: false)
+        homeCoordinator.appTabBar = appTabBarCoordinator.appTabBar
+        aboutCoordinator.appTabBar = appTabBarCoordinator.appTabBar
     }
 }

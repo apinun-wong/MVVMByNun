@@ -45,11 +45,14 @@
 		1CE01E9F2A5CFB0C00F4C6A8 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01E9E2A5CFB0C00F4C6A8 /* HomeSection.swift */; };
 		1CE01EA12A5CFC2700F4C6A8 /* Base64Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01EA02A5CFC2700F4C6A8 /* Base64Utils.swift */; };
 		1CE01EA32A5CFCD700F4C6A8 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01EA22A5CFCD700F4C6A8 /* Collection+Extension.swift */; };
-		7673A2A169B9A383B9C3AAF5 /* Pods_MVVM_Clean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89241CC9190F5CE33D0D5FD3 /* Pods_MVVM_Clean.framework */; };
+		1CE01EA62A5D044700F4C6A8 /* HttpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01EA42A5D044700F4C6A8 /* HttpDetailViewController.swift */; };
+		1CE01EA72A5D044700F4C6A8 /* HttpDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE01EA52A5D044700F4C6A8 /* HttpDetailViewController.xib */; };
+		1CE01EA92A5D045B00F4C6A8 /* HttpDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01EA82A5D045B00F4C6A8 /* HttpDetailViewModel.swift */; };
+		1CE01EAB2A5D049F00F4C6A8 /* HttpDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE01EAA2A5D049F00F4C6A8 /* HttpDetailCoordinator.swift */; };
+		75A15B1848DCC0486FDF4945 /* Pods_MVVM_Clean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BAD95DF0C8E04C8D2105F0 /* Pods_MVVM_Clean.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09BBFE3AA7BADB9D64072F90 /* Pods-MVVM+Clean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Clean.release.xcconfig"; path = "Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean.release.xcconfig"; sourceTree = "<group>"; };
 		1C378B8526284E7600E7268F /* MVVM+Clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+Clean.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C378B8826284E7600E7268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C378B8A26284E7600E7268F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +93,13 @@
 		1CE01E9E2A5CFB0C00F4C6A8 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		1CE01EA02A5CFC2700F4C6A8 /* Base64Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Utils.swift; sourceTree = "<group>"; };
 		1CE01EA22A5CFCD700F4C6A8 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
-		6AE0BE84AB962F68C2CEAB08 /* Pods-MVVM+Clean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Clean.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean.debug.xcconfig"; sourceTree = "<group>"; };
-		89241CC9190F5CE33D0D5FD3 /* Pods_MVVM_Clean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Clean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE01EA42A5D044700F4C6A8 /* HttpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDetailViewController.swift; sourceTree = "<group>"; };
+		1CE01EA52A5D044700F4C6A8 /* HttpDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HttpDetailViewController.xib; sourceTree = "<group>"; };
+		1CE01EA82A5D045B00F4C6A8 /* HttpDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDetailViewModel.swift; sourceTree = "<group>"; };
+		1CE01EAA2A5D049F00F4C6A8 /* HttpDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDetailCoordinator.swift; sourceTree = "<group>"; };
+		6D6BE2ABE3E2DD438C0647A9 /* Pods-MVVM+Clean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Clean.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean.debug.xcconfig"; sourceTree = "<group>"; };
+		7D199A18575FBF544A310549 /* Pods-MVVM+Clean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+Clean.release.xcconfig"; path = "Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean.release.xcconfig"; sourceTree = "<group>"; };
+		95BAD95DF0C8E04C8D2105F0 /* Pods_MVVM_Clean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Clean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,20 +107,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7673A2A169B9A383B9C3AAF5 /* Pods_MVVM_Clean.framework in Frameworks */,
+				75A15B1848DCC0486FDF4945 /* Pods_MVVM_Clean.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F0F45219EDE44573F66B60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95BAD95DF0C8E04C8D2105F0 /* Pods_MVVM_Clean.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1C378B7C26284E7600E7268F = {
 			isa = PBXGroup;
 			children = (
 				1C378B8726284E7600E7268F /* MVVM+Clean */,
 				1C378B8626284E7600E7268F /* Products */,
 				A07929718F91095A280C7E0F /* Pods */,
-				982B29312D90093446BBDAA2 /* Frameworks */,
+				14F0F45219EDE44573F66B60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +223,10 @@
 		1CB04A3F2A5A5CC800E2C834 /* HttpDetail */ = {
 			isa = PBXGroup;
 			children = (
+				1CE01EA42A5D044700F4C6A8 /* HttpDetailViewController.swift */,
+				1CE01EA52A5D044700F4C6A8 /* HttpDetailViewController.xib */,
+				1CE01EA82A5D045B00F4C6A8 /* HttpDetailViewModel.swift */,
+				1CE01EAA2A5D049F00F4C6A8 /* HttpDetailCoordinator.swift */,
 			);
 			path = HttpDetail;
 			sourceTree = "<group>";
@@ -322,19 +342,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		982B29312D90093446BBDAA2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				89241CC9190F5CE33D0D5FD3 /* Pods_MVVM_Clean.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A07929718F91095A280C7E0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6AE0BE84AB962F68C2CEAB08 /* Pods-MVVM+Clean.debug.xcconfig */,
-				09BBFE3AA7BADB9D64072F90 /* Pods-MVVM+Clean.release.xcconfig */,
+				6D6BE2ABE3E2DD438C0647A9 /* Pods-MVVM+Clean.debug.xcconfig */,
+				7D199A18575FBF544A310549 /* Pods-MVVM+Clean.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -346,11 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C378B9926284E7800E7268F /* Build configuration list for PBXNativeTarget "MVVM+Clean" */;
 			buildPhases = (
-				D9C492D91F98DC2F52663C07 /* [CP] Check Pods Manifest.lock */,
+				7B6D20374A91FCB8980A3BCB /* [CP] Check Pods Manifest.lock */,
 				1C378B8126284E7600E7268F /* Sources */,
 				1C378B8226284E7600E7268F /* Frameworks */,
 				1C378B8326284E7600E7268F /* Resources */,
-				7EDBCC83BFF5C8CC61AC34CA /* [CP] Embed Pods Frameworks */,
+				246B768EEAA32C5FEA3B8412 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,13 +417,14 @@
 				1CB04A612A5A66CF00E2C834 /* AboutViewController.xib in Resources */,
 				1CE01E8F2A5BB69100F4C6A8 /* HomeTableViewCell.xib in Resources */,
 				1CB04A452A5A5EFC00E2C834 /* SplashScreenViewController.xib in Resources */,
+				1CE01EA72A5D044700F4C6A8 /* HttpDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EDBCC83BFF5C8CC61AC34CA /* [CP] Embed Pods Frameworks */ = {
+		246B768EEAA32C5FEA3B8412 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +441,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM+Clean/Pods-MVVM+Clean-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D9C492D91F98DC2F52663C07 /* [CP] Check Pods Manifest.lock */ = {
+		7B6D20374A91FCB8980A3BCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,6 +481,7 @@
 				1CE01E912A5BBA6300F4C6A8 /* CollectionView+Extension.swift in Sources */,
 				1CE01E9C2A5CE86800F4C6A8 /* HomeTitleUITableViewHeaderFooterView.swift in Sources */,
 				1CB04A5C2A5A667500E2C834 /* AppTabBarController.swift in Sources */,
+				1CE01EA62A5D044700F4C6A8 /* HttpDetailViewController.swift in Sources */,
 				1C378B8926284E7600E7268F /* AppDelegate.swift in Sources */,
 				1CB04A632A5A66E300E2C834 /* AboutViewModel.swift in Sources */,
 				1CB04A562A5A61CD00E2C834 /* SplashCoordinator.swift in Sources */,
@@ -475,6 +489,7 @@
 				1CB04A4B2A5A5FDF00E2C834 /* RootCoordinator.swift in Sources */,
 				1CE01E8E2A5BB69100F4C6A8 /* HomeTableViewCell.swift in Sources */,
 				1CB04A4D2A5A614500E2C834 /* SplashScreenViewModel.swift in Sources */,
+				1CE01EAB2A5D049F00F4C6A8 /* HttpDetailCoordinator.swift in Sources */,
 				1CB04A442A5A5EFC00E2C834 /* SplashScreenViewController.swift in Sources */,
 				1CB04A682A5A67DD00E2C834 /* HomeViewController.swift in Sources */,
 				1CE01E972A5C57D900F4C6A8 /* HttpStatusResponse.swift in Sources */,
@@ -487,6 +502,7 @@
 				1CE01E9F2A5CFB0C00F4C6A8 /* HomeSection.swift in Sources */,
 				1CB04A652A5A671A00E2C834 /* AboutCoordinator.swift in Sources */,
 				1CB04A532A5A617700E2C834 /* DebugLogger.swift in Sources */,
+				1CE01EA92A5D045B00F4C6A8 /* HttpDetailViewModel.swift in Sources */,
 				1CB04A6D2A5A680400E2C834 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,7 +639,7 @@
 		};
 		1C378B9A26284E7800E7268F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AE0BE84AB962F68C2CEAB08 /* Pods-MVVM+Clean.debug.xcconfig */;
+			baseConfigurationReference = 6D6BE2ABE3E2DD438C0647A9 /* Pods-MVVM+Clean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -643,7 +659,7 @@
 		};
 		1C378B9B26284E7800E7268F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09BBFE3AA7BADB9D64072F90 /* Pods-MVVM+Clean.release.xcconfig */;
+			baseConfigurationReference = 7D199A18575FBF544A310549 /* Pods-MVVM+Clean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

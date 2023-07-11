@@ -28,9 +28,5 @@ final class AppTabBarViewModelImpl: BaseViewModel, AppTabBarViewModel {
         self.appTabBarCoordinator = appTabBarCoordinator
         self.navigationControllers = appTabBarCoordinator.getViewControllers()
     }
-    
-    func viewDidLoad() {
-        
-    }
 }
 

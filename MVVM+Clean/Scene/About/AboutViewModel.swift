@@ -24,16 +24,11 @@ final class AboutViewModelImpl: BaseViewModel, AboutViewModel {
     
     var aboutCoordinator: AboutCoordinator
     
-    private var timeout: Double = 3
-    
     init(aboutCoordinator: AboutCoordinator) {
         self.aboutCoordinator = aboutCoordinator
         super.init()
     }
-    
-    func viewDidLoad() {
-    }
-    
+
     func setupUnderLineText(fullText: String, emailText: String) -> NSAttributedString? {
         guard let emailRange = fullText.range(of: emailText) else { return nil }
         let emailNSRange = NSRange(emailRange, in: fullText)

@@ -26,5 +26,4 @@ class HomeTableViewCell: UITableViewCell {
         mainTitle.text = item.title
         subTitle.text = item.shortDescription
     }
-    
 }

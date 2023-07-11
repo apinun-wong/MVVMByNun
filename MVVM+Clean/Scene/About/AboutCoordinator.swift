@@ -7,15 +7,19 @@
 
 import UIKit
 
-protocol AboutCoordinator: Coordinator {}
+protocol AboutCoordinator: Coordinator {
+    var appTabBar: AppTabBarController? { get set }
+}
 
 final class AboutCoordinatorImpl: AboutCoordinator {
     var navigationController: UINavigationController
     var parent: AppTabBarCoordinator
+    var appTabBar: AppTabBarController?
     
-    init(navigationController: UINavigationController, parent: AppTabBarCoordinator) {
+    init(navigationController: UINavigationController, appTabBar: AppTabBarController? = nil, parent: AppTabBarCoordinator) {
         self.navigationController = navigationController
         self.parent = parent
+        self.appTabBar = appTabBar
     }
 
     func start(animated: Bool) {

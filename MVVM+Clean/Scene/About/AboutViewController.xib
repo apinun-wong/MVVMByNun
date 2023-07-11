@@ -81,7 +81,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.90313592657342656" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TO4-yF-fRx" secondAttribute="trailing" id="Cr9-Qg-uuM"/>
                 <constraint firstItem="TO4-yF-fRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GgH-C6-N2R"/>

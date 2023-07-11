@@ -7,7 +7,9 @@
 
 import Foundation
 
-public protocol HomeInput: AnyObject, BaseViewModelInputs {}
+public protocol HomeInput: AnyObject, BaseViewModelInputs {
+    func selectItem(indexPath: IndexPath)
+}
 public protocol HomeOutputs: AnyObject, BaseViewModelOutputs {
     var setUpItems: ((_ sections: [HomeSection]) -> Void)? { get set }
     func getHeaderTitle(section: Int) -> String?
@@ -25,7 +27,8 @@ final class HomeViewModelImpl: BaseViewModel, HomeViewModel {
     var homeCoordinator: HomeCoordinator
     var setUpItems: ((_ sections: [HomeSection]) -> Void)? = nil
     let getHttpStatusUseCase: GetHttpStatusUseCase
-    
+
+    private var httpStatusResponse: HttpStatusResponse?
     private var sections: [HomeSection] = []
     
     init(homeCoordinator: HomeCoordinator,
@@ -34,11 +37,16 @@ final class HomeViewModelImpl: BaseViewModel, HomeViewModel {
         self.getHttpStatusUseCase = getHttpStatusUseCase
         super.init()
     }
-    
+}
+
+// Input
+extension HomeViewModelImpl {
     func viewDidLoad() {
         guard let httpStatusData = getHttpStatusUseCase.getData() else {
+            self.httpStatusResponse = nil
             return
         }
+        self.httpStatusResponse = httpStatusData
         var sections: [HomeSection] = []
         for section in httpStatusData.data {
             var homeItems: [HomeItemType] = []
@@ -55,6 +63,20 @@ final class HomeViewModelImpl: BaseViewModel, HomeViewModel {
         setUpItems?(sections)
     }
     
+    func viewWillAppear() {
+        homeCoordinator.appTabBar?.isHiddenView = false
+    }
+    
+    func selectItem(indexPath: IndexPath) {
+        guard let item = httpStatusResponse?.data[indexPath.section].data[indexPath.row] else { return }
+        let httpId = item.httpId
+        let shortDesc = item.shortDescription
+        homeCoordinator.routeToDetailPage(title: "\(httpId)-\(shortDesc)", item: item)
+    }
+}
+
+// Output
+extension HomeViewModelImpl {
     func getHeaderTitle(section: Int) -> String? {
         if let sectionItem = sections[safe: section] {
             return sectionItem.title

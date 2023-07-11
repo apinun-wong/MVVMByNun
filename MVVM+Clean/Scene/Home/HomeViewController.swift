@@ -19,8 +19,13 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         viewModel.input.viewDidLoad?()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.input.viewWillAppear?()
+    }
+    
     private func setUpUI() {
-        self.title = "Home"
+        self.title = "All HTTP Status"
     }
     
     private func setUpTableView() {
@@ -63,5 +68,6 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.input.selectItem(indexPath: indexPath)
     }
 }

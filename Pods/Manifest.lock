@@ -1,16 +1,20 @@
 PODS:
+  - Kingfisher (7.8.1)
   - MKProgress (1.1.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 7.0)
   - MKProgress
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - MKProgress
 
 SPEC CHECKSUMS:
+  Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
   MKProgress: 260d166200323f3d991190a73ab2dc3a04b0f52f
 
-PODFILE CHECKSUM: 412a3487dce8898f7075350a9e94c6a08e0706de
+PODFILE CHECKSUM: e0cf8c98d6cb091f05eafb9fc63e34223101dc64
 
 COCOAPODS: 1.12.1
