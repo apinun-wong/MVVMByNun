@@ -4,6 +4,5 @@ platform :ios, '13.0'
 use_frameworks!
 
 target 'MVVM+Clean' do
-  pod 'MKProgress'
   pod 'Kingfisher', '~> 7.0'
 end

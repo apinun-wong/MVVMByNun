@@ -10,7 +10,6 @@
 		1C378B8926284E7600E7268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C378B8826284E7600E7268F /* AppDelegate.swift */; };
 		1C378B8B26284E7600E7268F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C378B8A26284E7600E7268F /* SceneDelegate.swift */; };
 		1C378B9226284E7800E7268F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C378B9126284E7800E7268F /* Assets.xcassets */; };
-		1C38E5AF2628564C00F38513 /* ProgressLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5AE2628564C00F38513 /* ProgressLoading.swift */; };
 		1C38E5C726289E8200F38513 /* URLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5C626289E8200F38513 /* URLConfig.swift */; };
 		1CB04A442A5A5EFC00E2C834 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB04A422A5A5EFC00E2C834 /* SplashScreenViewController.swift */; };
 		1CB04A452A5A5EFC00E2C834 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB04A432A5A5EFC00E2C834 /* SplashScreenViewController.xib */; };
@@ -58,7 +57,6 @@
 		1C378B8A26284E7600E7268F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1C378B9126284E7800E7268F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C378B9626284E7800E7268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C38E5AE2628564C00F38513 /* ProgressLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoading.swift; sourceTree = "<group>"; };
 		1C38E5C626289E8200F38513 /* URLConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfig.swift; sourceTree = "<group>"; };
 		1CB04A422A5A5EFC00E2C834 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		1CB04A432A5A5EFC00E2C834 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				1CB04A4E2A5A616800E2C834 /* Base */,
 				1C38E5C526289E7500F38513 /* Config */,
 				1CB04A472A5A5FAC00E2C834 /* Coordinator */,
-				1C38E5AD2628564500F38513 /* CustomView */,
 				1CB04A722A5BA0E000E2C834 /* Extension */,
 				1CB04A572A5A654B00E2C834 /* Main.storyboard */,
 				1C38E5BE26289C5D00F38513 /* Model */,
@@ -158,14 +155,6 @@
 				1CB04A752A5BA86100E2C834 /* Utils */,
 			);
 			path = "MVVM+Clean";
-			sourceTree = "<group>";
-		};
-		1C38E5AD2628564500F38513 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				1C38E5AE2628564C00F38513 /* ProgressLoading.swift */,
-			);
-			path = CustomView;
 			sourceTree = "<group>";
 		};
 		1C38E5BE26289C5D00F38513 /* Model */ = {
@@ -497,7 +486,6 @@
 				1C378B8B26284E7600E7268F /* SceneDelegate.swift in Sources */,
 				1CB04A742A5BA0F000E2C834 /* UITapGestureRecognizer+Extension.swift in Sources */,
 				1CE01EA32A5CFCD700F4C6A8 /* Collection+Extension.swift in Sources */,
-				1C38E5AF2628564C00F38513 /* ProgressLoading.swift in Sources */,
 				1CE01E9A2A5C5FE800F4C6A8 /* GetHttpStatusUseCase.swift in Sources */,
 				1CE01E9F2A5CFB0C00F4C6A8 /* HomeSection.swift in Sources */,
 				1CB04A652A5A671A00E2C834 /* AboutCoordinator.swift in Sources */,
