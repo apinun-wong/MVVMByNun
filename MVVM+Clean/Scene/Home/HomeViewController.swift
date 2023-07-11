@@ -9,13 +9,14 @@ import UIKit
 
 final class HomeViewController: BaseViewController<HomeViewModel> {
     @IBOutlet weak var tableView: UITableView!
-    var dataSource: UITableViewDiffableDataSource<HomeSectionType, HomeItemType>? = nil
+    var dataSource: UITableViewDiffableDataSource<HomeSection, HomeItemType>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.input.viewDidLoad?()
         setUpUI()
         setUpTableView()
+        bindOutputs()
+        viewModel.input.viewDidLoad?()
     }
     
     private func setUpUI() {
@@ -24,20 +25,43 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     
     private func setUpTableView() {
         tableView.registerNib(type: HomeTableViewCell.self)
-        dataSource = UITableViewDiffableDataSource<HomeSectionType, HomeItemType>(tableView: tableView, cellProvider: { tableView, indexPath, itemIdentifier in
+        tableView.registerNibHeaderFooter(type: HomeTitleUITableViewHeaderFooterView.self)
+        tableView.delegate = self
+        dataSource = UITableViewDiffableDataSource<HomeSection, HomeItemType>(tableView: tableView, cellProvider: { tableView, indexPath, itemIdentifier in
             if let cell: HomeTableViewCell = tableView.dequeueReusableCell() {
+                cell.setUp(item: itemIdentifier)
                return cell
             }
             return UITableViewCell()
         })
     }
+    
+    private func bindOutputs() {
+        self.viewModel.output.setUpItems = { [weak self] sections in
+            guard let self else { return }
+            var snapshot = NSDiffableDataSourceSnapshot<HomeSection, HomeItemType>()
+            snapshot.appendSections(sections)
+            sections.forEach { section in
+                snapshot.appendItems(section.items, toSection: section)
+            }
+            self.dataSource?.apply(snapshot)
+        }
+    }
 }
 
-enum HomeSectionType: Hashable {
-    case httpSection
-}
-
-struct HomeItemType: Hashable {
-    let title: String
-    let shortDescription: String
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = HomeTitleUITableViewHeaderFooterView(reuseIdentifier: "HomeTitleUITableViewHeaderFooterView")
+        let title = viewModel.output.getHeaderTitle(section: section) ?? ""
+        headerView.setUp(title: title)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

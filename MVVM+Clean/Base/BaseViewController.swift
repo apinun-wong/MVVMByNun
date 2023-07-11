@@ -36,7 +36,6 @@ open class BaseViewController<ViewModel>: UIViewController {
         navigationItem.scrollEdgeAppearance = navigationBarAppearance
         navigationItem.standardAppearance = navigationBarAppearance
         navigationItem.compactAppearance = navigationBarAppearance
-
     }
     
     deinit {

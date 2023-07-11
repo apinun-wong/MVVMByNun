@@ -14,6 +14,12 @@ extension UITableView {
         self.register(nib, forCellReuseIdentifier: nibName)
     }
     
+    func registerNibHeaderFooter(type: AnyClass, bundle: Bundle? = nil) {
+        let nibName = String(describing: type)
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        self.register(nib, forHeaderFooterViewReuseIdentifier: nibName)
+    }
+    
     open func dequeueReusableCell<T: UITableViewCell>() -> T? {
         let cellName = String(describing: T.self)
         return dequeueReusableCell(withIdentifier: cellName) as? T
